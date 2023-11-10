@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Behatch\Json;
 
 use Symfony\Component\PropertyAccess\PropertyAccessor;
+use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
 
 class JsonInspector
 {
@@ -14,7 +15,10 @@ class JsonInspector
     public function __construct(string $evaluationMode)
     {
         $this->evaluationMode = $evaluationMode;
-        $this->accessor = new PropertyAccessor(false, true);
+        $this->accessor = new PropertyAccessor(
+            ReflectionExtractor::DISALLOW_MAGIC_METHODS,
+            PropertyAccessor::THROW_ON_INVALID_INDEX
+        );
     }
 
     /**

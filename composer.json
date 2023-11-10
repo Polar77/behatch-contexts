@@ -17,16 +17,16 @@
         "behat/behat": "^3.8",
         "friends-of-behat/mink-extension": "^2.5",
         "justinrainbow/json-schema": "^5.2",
-        "symfony/dom-crawler": "^4.4|^5.3",
-        "symfony/http-foundation": "^5.3",
-        "symfony/property-access": "^5.3"
+        "symfony/dom-crawler": "^4.4|^5.3|^6.0",
+        "symfony/http-foundation": "^5.3|^6.0",
+        "symfony/property-access": "^5.3|^6.0"
     },
     "require-dev": {
         "atoum/atoum": "^4.0",
-        "behat/mink-goutte-driver": "^1.2",
+        "behat/mink-goutte-driver": "^1.2|^2.0",
         "behat/mink-selenium2-driver": "^1.4",
-        "fabpot/goutte": "^3.3",
-        "guzzlehttp/guzzle": "^6.5"
+        "fabpot/goutte": "^3.3|^4.0",
+        "guzzlehttp/guzzle": "^6.5|^7.7"
     },
     "autoload": {
         "psr-4": {

@@ -5,14 +5,14 @@ namespace Behatch\Xml;
 
 class Dom
 {
-    private \DomDocument $dom;
+    private \DOMDocument $dom;
 
     /**
      * @throws \DomException
      */
     public function __construct($content)
     {
-        $this->dom = new \DomDocument();
+        $this->dom = new \DOMDocument();
         $this->dom->strictErrorChecking = false;
         $this->dom->validateOnParse = false;
         $this->dom->preserveWhiteSpace = true;
@@ -24,7 +24,7 @@ class Dom
     {
         $this->dom->formatOutput = true;
 
-        return $this->dom->saveXML();
+        return (string) $this->dom->saveXML();
     }
 
     /**
