@@ -8,7 +8,7 @@ class Dom
     private \DOMDocument $dom;
 
     /**
-     * @throws \DomException
+     * @throws \DOMException
      */
     public function __construct($content)
     {
@@ -28,7 +28,7 @@ class Dom
     }
 
     /**
-     * @throws \DomException
+     * @throws \DOMException
      */
     public function validate(): void
     {
@@ -37,7 +37,7 @@ class Dom
     }
 
     /**
-     * @throws \DomException
+     * @throws \DOMException
      */
     public function validateXsd($xsd): void
     {
@@ -111,14 +111,14 @@ class Dom
     }
 
     /**
-     * @throws \DomException
+     * @throws \DOMException
      */
     private function throwError(): void
     {
         $error = \libxml_get_last_error();
         // https://bugs.php.net/bug.php?id=46465
         if (!empty($error) && $error->message !== 'Validation failed: no DTD found !') {
-            throw new \DomException($error->message . ' at line ' . $error->line);
+            throw new \DOMException($error->message . ' at line ' . $error->line);
         }
     }
 }
