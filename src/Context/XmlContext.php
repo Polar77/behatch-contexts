@@ -12,7 +12,7 @@ class XmlContext extends BaseContext
      * Checks that the response is correct XML
      *
      * @Then the response should be in XML
-     * @throws \DomException
+     * @throws \DOMException
      */
     public function theResponseShouldBeInXml(): void
     {
@@ -40,7 +40,7 @@ class XmlContext extends BaseContext
      *
      * @throws \Exception
      */
-    public function theXmlElementShouldExist(string $element): \DomNodeList
+    public function theXmlElementShouldExist(string $element): \DOMNodeList
     {
         $elements = $this->getDom()
             ->xpath($element);
@@ -283,7 +283,7 @@ class XmlContext extends BaseContext
 
     /**
      * @Then the XML feed should be valid according to this XSD:
-     * @throws \DomException
+     * @throws \DOMException
      */
     public function theXmlFeedShouldBeValidAccordingToThisXsd(PyStringNode $xsd): void
     {
@@ -292,7 +292,7 @@ class XmlContext extends BaseContext
 
     /**
      * @Then the XML feed should be valid according to the relax NG schema :filename
-     * @throws \DomException
+     * @throws \DOMException
      */
     public function theXmlFeedShouldBeValidAccordingToTheRelaxNgSchema($filename): void
     {
@@ -307,7 +307,7 @@ class XmlContext extends BaseContext
 
     /**
      * @Then the XML feed should be valid according to this relax NG schema:
-     * @throws \DomException
+     * @throws \DOMException
      */
     public function theXmlFeedShouldBeValidAccordingToThisRelaxNgSchema(PyStringNode $ng): void
     {
@@ -335,7 +335,7 @@ class XmlContext extends BaseContext
     }
 
     /**
-     * @throws \DomException
+     * @throws \DOMException
      */
     private function getDom(): Dom
     {
