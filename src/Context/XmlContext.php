@@ -337,7 +337,7 @@ class XmlContext extends BaseContext
     /**
      * @throws \DOMException
      */
-    private function getDom(): Dom
+    protected function getDom(): Dom
     {
         $content = $this->getSession()->getPage()->getContent();
 
