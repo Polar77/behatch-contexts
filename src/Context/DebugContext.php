@@ -71,7 +71,9 @@ class DebugContext extends BaseContext
     {
         try {
             $headers = $this->getMink()->getSession()->getResponseHeaders();
-            echo "The debug profile URL {$headers['X-Debug-Token-Link'][0]}";
+            if (isset($headers['X-Debug-Token-Link'][0])) {
+                echo "The debug profile URL {$headers['X-Debug-Token-Link'][0]}";
+            }
         } catch (\Exception) {
             /* Intentionally leave blank */
         }
